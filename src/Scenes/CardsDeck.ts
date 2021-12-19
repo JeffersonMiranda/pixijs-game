@@ -131,6 +131,7 @@ export default class CardsDeck extends Scene {
   public createSecondCards(): void {
     let index = this.cardsQuantity - 1
     let indexPositionY = 0
+    const interval = 1000
    
     const cardMoving = setInterval(() => {
       this.moveCardToSecondDeck(this.cards.children[index], indexPositionY * this.distanceBetweenCards)
@@ -141,6 +142,6 @@ export default class CardsDeck extends Scene {
       
       index--
       indexPositionY++
-    }, 2000)
+    }, interval)
   }
 }
