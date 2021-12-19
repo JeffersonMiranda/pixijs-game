@@ -2,7 +2,7 @@
 
 Link: [https://ts-pixi-game.herokuapp.com/](https://ts-pixi-game.herokuapp.com/)
 
-This is a PixiJS application with consisting of three games:
+This is a PixiJS application with composed of three games:
 
 - Cards deck
 - Random texts
@@ -66,6 +66,8 @@ About my decisions:
 - I was not sure if Particle.Container would be the best option to store the fires' spritesheets. Anyway, I could easily organize them with a simple Container. 
 
 - The way implemented to disable a Container to show another is not problem the best approach, for example: exiting from Menu and going to any game. I was a bit complicated to manipulate the general information of the game across the container, but that was the way that I could find in few hours. Anyway, even with a little of complexity, it's still scalable.
+
+- I had to add the fire assets to the public folder because the URL of the spritesheet was not being recognized and bundled by the webpack in production mode, so the easiest way was adding them to public folder at least for a while =D  
 
 - At last, the menu song is from a Brazilian singer called Seu Jorge, this song is included in FIFA 2007 game soundtrack!! Take a look: [https://www.youtube.com/watch?v=AoPrF8l2uQg](https://www.youtube.com/watch?v=AoPrF8l2uQg)
 
