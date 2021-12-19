@@ -1,14 +1,16 @@
-import { Container, Sprite } from 'pixi.js'
+import { Application, Container, Sprite } from 'pixi.js'
 import gsap from 'gsap'
 import Scene from './Scene'
 import { Globals } from '../Globals'
 import { isMobile } from '../utils'
 import BackgroundSound from '../BackgroundSound'
+import FPS from '../FPS'
 
 export default class CardsDeck extends Scene {
-  constructor() {
+  constructor(game: Application) {
     super()
 
+    this.game = game
     this.createBackground()
     this.cards.position.y = 0
     this.cards.sortableChildren = true
@@ -20,14 +22,30 @@ export default class CardsDeck extends Scene {
     this.on('removed', () => {
       this.cardsSound.stop()
     })
+
+    this.setFPS()
   }
 
+  private game: Application
+  private FPSData: FPS
   private cards: Container = new Container()
   private cardsSprites: Sprite[] = []
   private cardsQuantity: number
   private distanceBetweenCards: number
   private lastZIndex: number = 0
   private cardsSound: BackgroundSound
+
+  public setFPS(): void {
+    this.FPSData = new FPS()
+    this.FPSData.position.set(80, 30)
+    this.FPSData.anchor.set(0.5)
+
+    this.addChild(this.FPSData)
+    
+    this.game.ticker.add(() => {
+      this.FPSData.setFrames(this.game.ticker.FPS)
+    })
+  }
 
   public createBackground(): void {
     const backgroundSprite = Sprite.from(Globals.resources['tableCards'].texture)

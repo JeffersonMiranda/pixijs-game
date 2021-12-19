@@ -52,7 +52,7 @@ export default class Menu {
     const randomTextsosition: IScreenPosition = { x: centerScreen, y: 70 }
     const fireEffectsPosition: IScreenPosition = { x: centerScreen, y: 140 }
 
-    this.buttonsContainer.addChild(this.addSceneButton('menu_button_1', () => new CardsDeck(), cardsDeckPosition ))
+    this.buttonsContainer.addChild(this.addSceneButton('menu_button_1', () => new CardsDeck(this.gameApp), cardsDeckPosition ))
     this.buttonsContainer.addChild(this.addSceneButton('menu_button_2', () => new RandomTexts(), randomTextsosition ))
     this.buttonsContainer.addChild(this.addSceneButton('menu_button_3', () => new FiresEffects(this.gameApp), fireEffectsPosition ))
 
