@@ -41,7 +41,7 @@ export default class FiresEffects extends Scene {
   public loadTextures(): void {
     const loader = new Loader()
 
-    loader.add('fire_animation', './../../assets/images/fire/fire_spritesheet.json')
+    loader.add('fire_animation', require('./../../assets/images/fire/fire_spritesheet.json'))
           .load((loader: any) => {
             Globals.resources['fire_animation'] = loader.resources.fire_animation.spritesheet.animations.fire
 
