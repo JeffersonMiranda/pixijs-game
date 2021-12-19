@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require("terser-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
   entry: './src/index.ts',
@@ -26,6 +27,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'public', to: path.join(__dirname, 'dist/') }
+      ]
+    }),
     new HtmlWebpackPlugin()
   ],
   optimization: {
@@ -47,6 +53,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
+    publicPath: '/'
   }
 }
