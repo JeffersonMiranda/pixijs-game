@@ -25,7 +25,7 @@ export default class FiresEffects extends Scene {
   private readonly maxSpritesInTheScreen: number = 10
   private backgroundSong: BackgroundSound
 
-  createBackground() {
+  public createBackground() {
     this.backgroundSprite = new TilingSprite(Globals.resources['bg_sky'].texture)
 
     this.backgroundSprite.width = window.innerWidth
@@ -34,11 +34,11 @@ export default class FiresEffects extends Scene {
     this.addChild(this.backgroundSprite)
   }
 
-  public playBackgroundSong() {
+  public playBackgroundSong(): void {
     this.backgroundSong = new BackgroundSound('./../assets/sounds/Multiple-Loud-FireWorks.mp3')
   }
 
-  loadTextures() {
+  public loadTextures(): void {
     const loader = new Loader()
 
     loader.add('fire_animation', './../../assets/images/fire/fire_spritesheet.json')
@@ -50,7 +50,7 @@ export default class FiresEffects extends Scene {
           })
    }
    
-   startExplosions() {
+   public startExplosions(): void {
      const isSpritesQuantityInLimit = (): boolean => this.spritesInTheScreen <= this.maxSpritesInTheScreen
      
      setInterval(() => {
@@ -63,7 +63,7 @@ export default class FiresEffects extends Scene {
      }, 150)
    }
 
-  createExplosion(position: IScreenPosition) {
+  public createExplosion(position: IScreenPosition): void {
 		const explosion = new AnimatedSprite(Globals.resources['fire_animation'])
 		
     const randomSize = getRandomValue(20, 300)
@@ -86,7 +86,7 @@ export default class FiresEffects extends Scene {
 	 	this.addChild(explosion)
    }
 
-  update() {
+  public update(): void {
     this.game.ticker.add((delta: number) => {
       this.backgroundSprite.tilePosition.x -= 0.5 * delta
     })

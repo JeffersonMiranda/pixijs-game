@@ -11,11 +11,11 @@ export default abstract class Scene extends Container {
 
   private buttonSprite: Sprite
 
-  public addHomeButton() {
+  public addHomeButton(): void {
     this.buttonSprite = Sprite.from(Globals.resources['back_button'].texture)
     this.buttonSprite.scale.set(0.3)
     this.buttonSprite.anchor.set(0.5)
-    this.buttonSprite.position.set(40)
+    this.buttonSprite.position.set(window.innerWidth - this.buttonSprite.width, 40)
     this.setBackButtonClick()
 
     this.buttonSprite.zIndex = 1
@@ -23,7 +23,7 @@ export default abstract class Scene extends Container {
     this.addChild(this.buttonSprite)
   }
 
-  public setBackButtonClick() {
+  public setBackButtonClick(): void {
     this.buttonSprite.interactive = true
     this.buttonSprite.buttonMode = true
 
@@ -32,7 +32,7 @@ export default abstract class Scene extends Container {
     })
   }
 
-  public destroyScene(callback?: Function) {
+  public destroyScene(callback?: Function): void {
     this.parent.removeChild(this)
 
     if (callback) callback()

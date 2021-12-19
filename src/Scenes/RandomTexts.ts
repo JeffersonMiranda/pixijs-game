@@ -21,7 +21,7 @@ export default class RandomTexts extends Scene {
 
   private backgroundSong: BackgroundSound
   
-  createBackground() {
+  public createBackground(): void {
     const backgroundSprite = Sprite.from(Globals.resources['randomTextsBackground'].texture)
 
     backgroundSprite.width = window.innerWidth
@@ -30,7 +30,7 @@ export default class RandomTexts extends Scene {
     this.addChild(backgroundSprite)
   }
 
-  public playBackgroundSong() {
+  public playBackgroundSong(): void {
     this.backgroundSong = new BackgroundSound('./../assets/sounds/Solve-The-Puzzle.mp3')
   }
 

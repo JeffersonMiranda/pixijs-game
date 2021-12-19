@@ -28,7 +28,7 @@ export default class Menu {
     return this.container
   }
 
-  public playSound() {
+  public playSound(): void {
     this.songBackground = new BackgroundSound('./../assets/sounds/Seu Jorge Tive Razao.mp3')
   }
 
@@ -87,7 +87,7 @@ export default class Menu {
     return gameButton
   }
 
-  public removeMenu() {
+  public removeMenu(): void {
     this.container.removeChild(this.buttonsContainer)
   }
 }
