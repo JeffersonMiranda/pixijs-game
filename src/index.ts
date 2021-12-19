@@ -1,6 +1,6 @@
 import Game from './Game'
 
-import './css/style.scss'
+import './scss/style.scss'
 
 const gameConfig = {
   resizeTo: window,
