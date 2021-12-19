@@ -33,7 +33,7 @@ npm run dev
 npm run build
 ```
 
-Open yourlocalhost:80801
+Open your localhost:80801
 
 ## The project
 
@@ -65,18 +65,18 @@ About my decisions:
 
 - I was not sure if Particle.Container would be the best option to store the fires' spritesheets. Anyway, I could easily organize them with a simple Container. 
 
-- The way implemented to disable a Container to show another is not problem the best approach, for example: exiting from Menu and going to any game. I was a bit complicated to manipulate the general information of the game across the container, but that was the way that I could find in few hours. Anyway, even with a little of complexity, it's still scalable.
+- The way implemented to disable a Container to show another is not probably the best approach, for example: exiting from Menu and going to any game. It was a bit complicated to manipulate the general information of the game across the containers, but it was the way that I could make it work in few hours. Anyway, even with a little of complexity, it's still scalable.
 
 - I had to add the fire assets to the public folder because the URL of the spritesheet was not being recognized and bundled by the webpack in production mode, so the easiest way was adding them to public folder at least for a while =D  
 
-- At last, the menu song is from a Brazilian singer called Seu Jorge, this song is included in FIFA 2007 game soundtrack!! Take a look: [https://www.youtube.com/watch?v=AoPrF8l2uQg](https://www.youtube.com/watch?v=AoPrF8l2uQg)
+- At last, the menu song is from a Brazilian singer called Seu Jorge, this song is included in FIFA 2007 game soundtrack!! Take a look at this Brazilian samba: [https://www.youtube.com/watch?v=AoPrF8l2uQg](https://www.youtube.com/watch?v=AoPrF8l2uQg)
 
 
 What I would like to add in the future: 
 
 - I would love to add a State Management tool similar to Redux or Vuex. It's much easier to manipulate the data in the application. It would be easier, for example, to get any data from PIXI.Application from a Container or Sprite. If I had time I certainly would think about it.
 
-- I know that some backgrounds are not refined, but I did not have time for them, sorry, anyway if I have more time I would improve the responsiveness of the sprites and backgrounds because they should perfectly scale according the device screen. 
+- I know that some backgrounds are not refined, but I did not have time for them, sorry, anyway if I had more time I would improve the responsiveness of the sprites and backgrounds because they should perfectly scale according the device screen. 
 
 That's all, I'm totally open to discuss the above points. Of course I have a lot to learn and share with you guys! 
 
