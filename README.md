@@ -1,5 +1,7 @@
 # Test task 
 
+Link: [https://ts-pixi-game.herokuapp.com/](https://ts-pixi-game.herokuapp.com/)
+
 This is a PixiJS application with consisting of three games:
 
 - Cards deck
@@ -30,6 +32,8 @@ npm run dev
 
 npm run build
 ```
+
+Open yourlocalhost:80801
 
 ## The project
 
