@@ -29,7 +29,7 @@ export default class Menu {
   }
 
   public playSound(): void {
-    this.songBackground = new BackgroundSound('./../assets/sounds/Seu Jorge Tive Razao.mp3')
+    this.songBackground = new BackgroundSound(require('./../assets/sounds/Seu Jorge Tive Razao.mp3'))
   }
 
   public addBackground(): void {

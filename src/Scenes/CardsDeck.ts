@@ -57,7 +57,7 @@ export default class CardsDeck extends Scene {
   }
 
   public playSound() {
-    this.cardsSound = new BackgroundSound('./../assets/sounds/Dealing-cards-sound.mp3')
+    this.cardsSound = new BackgroundSound(require('./../../assets/sounds/Dealing-cards-sound.mp3'))
   }
 
   public createRandomCard(): Sprite {

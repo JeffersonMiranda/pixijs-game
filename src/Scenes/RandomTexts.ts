@@ -31,7 +31,7 @@ export default class RandomTexts extends Scene {
   }
 
   public playBackgroundSong(): void {
-    this.backgroundSong = new BackgroundSound('./../assets/sounds/Solve-The-Puzzle.mp3')
+    this.backgroundSong = new BackgroundSound(require('./../../assets/sounds/Solve-The-Puzzle.mp3'))
   }
 
   public getStyle(fontSize: number): TextStyle {

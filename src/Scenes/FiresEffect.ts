@@ -35,7 +35,7 @@ export default class FiresEffects extends Scene {
   }
 
   public playBackgroundSong(): void {
-    this.backgroundSong = new BackgroundSound('./../assets/sounds/Multiple-Loud-FireWorks.mp3')
+    this.backgroundSong = new BackgroundSound(require('./../../assets/sounds/Multiple-Loud-FireWorks.mp3'))
   }
 
   public loadTextures(): void {
