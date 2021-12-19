@@ -69,8 +69,9 @@ export default class CardsDeck extends Scene {
 
   public createDeckCards(cardsQuantity: number = 144): Promise<unknown> {
     this.playSound()
-    const responsiveDistanceBetweenCards = isMobile ? 3.5 : 2.5
-
+    
+    const responsiveDistanceBetweenCards = window.innerHeight > 500 ? 2.5 : 1.8
+    
     this.distanceBetweenCards = responsiveDistanceBetweenCards
     this.cardsQuantity = cardsQuantity
     
