@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require("copy-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 
 module.exports = {
@@ -27,11 +26,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: 'assets', to: path.join(__dirname, 'dist/assets/') }
-      ]
-    }),
     new HtmlWebpackPlugin()
   ],
   optimization: {
