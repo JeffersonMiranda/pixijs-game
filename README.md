@@ -33,7 +33,7 @@ npm run dev
 npm run build
 ```
 
-Open your localhost:80801
+Open your localhost:8081
 
 ## The project
 
