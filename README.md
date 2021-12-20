@@ -2,7 +2,7 @@
 
 Link: [https://ts-pixi-game.herokuapp.com/](https://ts-pixi-game.herokuapp.com/)
 
-This is a PixiJS application with composed of three games:
+This is a PixiJS application composed of three games:
 
 - Cards deck
 - Random texts
